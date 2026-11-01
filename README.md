@@ -109,10 +109,11 @@ The column is not included here.
 `audit_cutoff_provenance.py` identifies the pipeline from the data:
 systems released between 2021-09-30 and 2023-06-01 exist in the Boltz-1
 target pool and cannot exist in the Boltz-2 one, so their presence is
-decisive. It also checks that the probe index agrees with the target
-table, that no JSON records the wrong cutoff, and that the extraction
-manifest matches. It fails closed: an artefact that is missing or
-unreadable is a problem rather than a silent skip.
+decisive. It also checks that the probe index exists and is well formed, that
+no JSON records the wrong cutoff, and that the extraction manifest
+matches. Where the target table still carries a quadrant column it
+compares that against the index too; ours does not, for the reason
+in *Provenance* above.
 
 It cannot tell whether a table in the manuscript still matches the file
 on disk. That gap is how a table generated against the wrong cutoff
@@ -123,6 +124,12 @@ verifies that the stored labels are consistent with the supplied
 per-ligand scores; it does not independently reconstruct how those
 scores were computed, so it cannot establish comparison direction,
 reference eligibility, self-exclusion or ligand coverage.
+
+Running the audit on the authors' own results directory reports three
+problems, all JSON files in directories named `SUPERSEDED` or
+`boltz2`. They are kept as the record of a rejected pipeline and feed
+nothing in the paper. The audit cannot tell a deliberately archived
+file from a wrong one in use, which is the correct conservatism.
 
 ## Results files
 
