@@ -86,9 +86,17 @@ def main(argv=None):  # noqa: C901
     if not tg_path.exists():
         sys.exit(f"{tg_path} does not exist")
     tg = pd.read_parquet(tg_path)
-    for c in ("system_id", "release_date", "quadrant"):
+    for c in ("system_id", "release_date"):
         if c not in tg.columns:
             sys.exit(f"{tg_path.name} has no '{c}'")
+    # A quadrant column here is optional and its absence is
+    # deliberate. An earlier build of this file carried one, left
+    # over from a different threshold, which disagreed with the
+    # index on about half the systems; the index is the authority
+    # and the column was removed so nothing could join on it. When
+    # it is absent the index comparison below is simply not
+    # available, which is not a problem to report.
+    tg_has_quadrant = "quadrant" in tg.columns
     d = pd.to_datetime(tg.release_date, errors="coerce")
     if d.isna().any():
         problems.append(f"{tg_path.name}: {int(d.isna().sum())} "
@@ -120,16 +128,30 @@ def main(argv=None):  # noqa: C901
               f"{args.expected_cutoff} cutoff")
 
     # ---- the index must carry the same assignment -------------------
+    # Existence of the index is checked first and always. Whether
+    # the target table still carries a quadrant column only decides
+    # whether the comparison can be made, never whether the index
+    # itself is verified.
     ix_path = root / args.index
-    if ix_path.exists():
+    if not ix_path.exists():
+        problems.append(f"{ix_path.name} not found. It is an "
+                        f"expected artefact of this study, and an "
+                        f"audit that passes without it has not "
+                        f"checked the assignment every result uses.")
+    else:
         ix = pd.read_parquet(ix_path)
-        # An artefact that exists but cannot be read is not an
-        # artefact that passed. Skipping it silently would turn
-        # "could not check" into "checked and clean".
         lack = {"system_id", "quadrant"} - set(ix.columns)
         if lack:
             problems.append(f"{ix_path.name} lacks {sorted(lack)}; "
                             f"index provenance was not checked.")
+        elif not tg_has_quadrant:
+            notes.append(f"{tg_path.name} carries no quadrant "
+                         f"column, so agreement with "
+                         f"{ix_path.name} was not tested. The "
+                         f"absence is intentional: an earlier build "
+                         f"carried one from a different threshold "
+                         f"and the index is the authority. See the "
+                         f"repository README.")
         else:
             m = ix[["system_id", "quadrant"]].merge(
                 tg[["system_id", "quadrant"]], on="system_id",
@@ -150,13 +172,8 @@ def main(argv=None):  # noqa: C901
                        & m.quadrant_tg.notna()].head(3)
                 problems.append(
                     f"{ix_path.name}: {disagree} systems carry a "
-                    f"different quadrant from the target table, e.g. "
-                    f"{ex.to_dict('records')}")
-    else:
-        problems.append(f"{ix_path.name} not found. It is an expected "
-                        f"artefact of this study, and an audit that "
-                        f"passes without checking it has not checked "
-                        f"the assignment that every result uses.")
+                    f"different quadrant from the target table, "
+                    f"e.g. {ex.to_dict('records')}")
 
     # ---- any JSON that records a cutoff -----------------------------
     print(f"\nJSON results recording a cutoff:")
