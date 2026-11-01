@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering
+\caption{Empirical false-positive rate of the persistence rule, measured on this study's own null. Each entry is the fraction of null trajectories producing an onset at that persistence, each trajectory tested against a threshold built from the other $B-1$ replicates. The pre-registered value is $p=5$, whose measured rate is 0.04--0.07 against a nominal $\alpha=0.05$; at $p=3$ it is 0.12--0.17. Columns other than $p=5$ are diagnostics, not alternative endpoints.}
+\label{tab:onset-fpr}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Curve & $p=1$ & $p=2$ & $p=3$ & $p=4$ & $p=5$ & $p=6$ & $p=7$ \\
+\midrule
+\texttt{s/FF} & 0.71 & 0.29 & 0.17 & 0.08 & 0.06$^{\star}$ & 0.04 & 0.02 \\
+\texttt{s/FN} & 0.69 & 0.24 & 0.12 & 0.08 & 0.05$^{\star}$ & 0.05 & 0.04 \\
+\texttt{s/NF} & 0.71 & 0.32 & 0.13 & 0.05 & 0.04$^{\star}$ & 0.03 & 0.02 \\
+\texttt{s/NN} & 0.68 & 0.22 & 0.12 & 0.09 & 0.07$^{\star}$ & 0.04 & 0.02 \\
+\bottomrule
+\end{tabular}
+\end{table}

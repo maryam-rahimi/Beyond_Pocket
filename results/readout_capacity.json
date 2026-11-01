@@ -1,0 +1,52 @@
+{
+  "feature": "s",
+  "layer": 18,
+  "pair": [
+    "FN",
+    "NF"
+  ],
+  "n_boot": 2000,
+  "seed": 0,
+  "C": 10.0,
+  "readouts_compared": [
+    "linear",
+    "mlp"
+  ],
+  "heads_not_available": [
+    "axial",
+    "pairformerK"
+  ],
+  "reason": "the extraction retained z only as row mean, column mean and self-pair diagonal, so the L x L structure these heads operate on is not on disk",
+  "cells": {
+    "linear": {
+      "FF": 0.5296,
+      "FN": 0.2299,
+      "NF": 0.6007,
+      "NN": 0.4763
+    },
+    "mlp": {
+      "FF": 0.5235,
+      "FN": 0.2648,
+      "NF": 0.6023,
+      "NN": 0.4533
+    }
+  },
+  "mlp_validation_trace": [
+    0.4921050021872433,
+    0.45697726123817706,
+    0.44745556236848705,
+    0.43735971839602966,
+    0.4238911699222958,
+    0.41547724105522793
+  ],
+  "mlp_epochs_selected": 1,
+  "mlp_trace_argmax_epoch": 1,
+  "mlp_trace_argmax_auprc": 0.4921050021872433,
+  "mlp_later_gain_if_epoch1": -0.03512774094906623,
+  "gap_linear": 0.3708,
+  "gap_mlp": 0.3375,
+  "change": -0.0333,
+  "lo": -0.0728,
+  "hi": 0.0824,
+  "excludes_zero": false
+}

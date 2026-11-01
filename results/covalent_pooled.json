@@ -1,0 +1,53 @@
+{
+  "feature": "s",
+  "layer": 18,
+  "flag": "ligand_is_covalent",
+  "exploratory": true,
+  "n_systems": 534,
+  "n_covalent": 93,
+  "per_cell": {
+    "FF": {
+      "n_covalent": 31,
+      "n_other": 121,
+      "median_covalent": 0.1125,
+      "median_other": 0.5789
+    },
+    "FN": {
+      "n_covalent": 31,
+      "n_other": 91,
+      "median_covalent": 0.1162,
+      "median_other": 0.318
+    },
+    "NF": {
+      "n_covalent": 15,
+      "n_other": 121,
+      "median_covalent": 0.65,
+      "median_other": 0.596
+    },
+    "NN": {
+      "n_covalent": 16,
+      "n_other": 108,
+      "median_covalent": 0.0444,
+      "median_other": 0.5286
+    }
+  },
+  "estimand": "association with MEAN AUPRC; observational subgrouping, not an effect",
+  "adjusted": {
+    "estimate": -0.2205,
+    "lo": -0.279,
+    "hi": -0.1602,
+    "excludes_zero": true,
+    "model": "auprc ~ covalent + regime, FF reference; additive, no covalent-by-regime interaction, so a common association is assumed rather than shown"
+  },
+  "unadjusted": {
+    "statistic": "difference in means",
+    "estimate": -0.2446,
+    "lo": -0.3028,
+    "hi": -0.1846
+  },
+  "n_boot": 2000,
+  "seed": 0,
+  "n_replicates_used": 2000,
+  "resampled": "family_cluster",
+  "plinder_dir": "/home/ma490392/.local/share/plinder/2026-09"
+}

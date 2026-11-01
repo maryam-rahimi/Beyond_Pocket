@@ -1,0 +1,11 @@
+{
+  "release": "2026-09",
+  "boundary": "exclusive (date > cutoff)",
+  "total_systems": 611929,
+  "total_entries": 141761,
+  "no_date": 0,
+  "post": {
+    "2021-09-30": 245732,
+    "2023-06-01": 160130
+  }
+}

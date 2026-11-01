@@ -1,0 +1,55 @@
+{
+  "n_systems": 1820,
+  "n_layers": 48,
+  "n_clusters": 1645,
+  "test_frac": 0.3,
+  "seed": 0,
+  "cells": {
+    "FF": {
+      "train": 323,
+      "test": 152,
+      "clusters": 475,
+      "median_length": 362,
+      "median_positive_rate": 0.07534246575342465
+    },
+    "FN": {
+      "train": 310,
+      "test": 122,
+      "clusters": 432,
+      "median_length": 382,
+      "median_positive_rate": 0.0621238110088882
+    },
+    "NF": {
+      "train": 335,
+      "test": 136,
+      "clusters": 471,
+      "median_length": 364,
+      "median_positive_rate": 0.07088607594936709
+    },
+    "NN": {
+      "train": 318,
+      "test": 124,
+      "clusters": 442,
+      "median_length": 377,
+      "median_positive_rate": 0.06860832404310666
+    }
+  },
+  "excluded": {
+    "no representation file": 4,
+    "unreadable": 0,
+    "wrong storage dtype": 0,
+    "manifest/label length disagreement": 0,
+    "representation/label length disagreement": 0,
+    "no family cluster": 0,
+    "ineligible": 0,
+    "no positive residues": 0
+  },
+  "feature_sets": [
+    "s",
+    "zpool",
+    "both"
+  ],
+  "primary_feature_set": "s",
+  "s_width": 384,
+  "z_width": 384
+}

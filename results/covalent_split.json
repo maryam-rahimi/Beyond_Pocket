@@ -1,0 +1,52 @@
+{
+  "FN": {
+    "n_covalent": 31,
+    "n_other": 91,
+    "median_covalent": 0.1162,
+    "median_other": 0.318,
+    "within_gap": -0.2018,
+    "below_floor": false
+  },
+  "NF": {
+    "n_covalent": 15,
+    "n_other": 121,
+    "median_covalent": 0.65,
+    "median_other": 0.596,
+    "within_gap": 0.0539,
+    "below_floor": false
+  },
+  "FF": {
+    "n_covalent": 31,
+    "n_other": 121,
+    "median_covalent": 0.1125,
+    "median_other": 0.5789,
+    "within_gap": -0.4664,
+    "below_floor": false
+  },
+  "NN": {
+    "n_covalent": 16,
+    "n_other": 108,
+    "median_covalent": 0.0444,
+    "median_other": 0.5286,
+    "within_gap": -0.4842,
+    "below_floor": false
+  },
+  "_meta": {
+    "feature": "s",
+    "flag": "ligand_is_covalent",
+    "contrast": "FN within-gap - NF within-gap",
+    "comparison_made": true,
+    "estimate": -0.2558,
+    "lo": -0.4294,
+    "hi": 0.242,
+    "excludes_zero": false,
+    "excludes_zero_note": null,
+    "layer": 18,
+    "min_half": 15,
+    "n_boot": 2000,
+    "seed": 0,
+    "resampled": "family_cluster",
+    "n_replicates_used": 2000,
+    "plinder_dir": "/home/ma490392/.local/share/plinder/2026-09"
+  }
+}

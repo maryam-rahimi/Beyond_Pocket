@@ -1,0 +1,36 @@
+{
+  "cutoff": "2021-09-30",
+  "reference_pool": "all pre-cutoff systems",
+  "validation_filter": true,
+  "total_systems": 611929,
+  "post_cutoff_systems": 245732,
+  "assigned_targets": 25695,
+  "sequence_cluster_chain_coverage": 0.9816917321982308,
+  "complete_system_coverage": 0.9805467627780347,
+  "unresolved_sf": 213,
+  "unresolved_sp": 228,
+  "incomplete_family_signatures": 221,
+  "cells": {
+    "FF": {
+      "systems": 0,
+      "entries": 0,
+      "clusters": 0
+    },
+    "FN": {
+      "systems": 20819,
+      "entries": 9085,
+      "clusters": 2163
+    },
+    "NF": {
+      "systems": 0,
+      "entries": 0,
+      "clusters": 0
+    },
+    "NN": {
+      "systems": 4876,
+      "entries": 2009,
+      "clusters": 1127
+    }
+  },
+  "weakest_cell_clusters": 0
+}

@@ -1,0 +1,115 @@
+{
+  "biounit_num_ligands": {
+    "label": "ligands in the structure",
+    "aggregation": "first",
+    "cells": {
+      "FF": 2.0,
+      "FN": 3.0,
+      "NF": 2.0,
+      "NN": 3.0
+    },
+    "fn_minus_nf": 1.0,
+    "lo": 0.0,
+    "hi": 2.0,
+    "excludes_zero": false
+  },
+  "ligand_num_atoms_with_crystal_contacts": {
+    "label": "ligand atoms with crystal contacts",
+    "aggregation": "max",
+    "cells": {
+      "FF": 0.0,
+      "FN": 0.0,
+      "NF": 0.0,
+      "NN": 0.0
+    },
+    "fn_minus_nf": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "excludes_zero": false
+  },
+  "ligand_num_pocket_residues": {
+    "label": "pocket residues",
+    "aggregation": "median",
+    "cells": {
+      "FF": 22.0,
+      "FN": 18.25,
+      "NF": 22.0,
+      "NN": 18.5
+    },
+    "fn_minus_nf": -3.75,
+    "lo": -7.0,
+    "hi": -0.5,
+    "excludes_zero": true
+  },
+  "ligand_is_cofactor": {
+    "label": "cofactor fraction",
+    "aggregation": "any ligand, per system",
+    "cells": {
+      "FF": 0.3487,
+      "FN": 0.1148,
+      "NF": 0.4118,
+      "NN": 0.25
+    },
+    "fn_minus_nf": -0.297,
+    "lo": -0.4045,
+    "hi": -0.1986,
+    "excludes_zero": true
+  },
+  "ligand_is_ion": {
+    "label": "ion fraction",
+    "aggregation": "any ligand, per system",
+    "cells": {
+      "FF": 0.1776,
+      "FN": 0.1885,
+      "NF": 0.2206,
+      "NN": 0.2823
+    },
+    "fn_minus_nf": -0.0321,
+    "lo": -0.1312,
+    "hi": 0.0614,
+    "excludes_zero": false
+  },
+  "ligand_is_fragment": {
+    "label": "fragment fraction",
+    "aggregation": "any ligand, per system",
+    "cells": {
+      "FF": 0.1316,
+      "FN": 0.2049,
+      "NF": 0.1691,
+      "NN": 0.2097
+    },
+    "fn_minus_nf": 0.0358,
+    "lo": -0.0597,
+    "hi": 0.1287,
+    "excludes_zero": false
+  },
+  "ligand_is_covalent": {
+    "label": "covalent fraction",
+    "aggregation": "any ligand, per system",
+    "cells": {
+      "FF": 0.2039,
+      "FN": 0.2541,
+      "NF": 0.1103,
+      "NN": 0.129
+    },
+    "fn_minus_nf": 0.1438,
+    "lo": 0.0546,
+    "hi": 0.2396,
+    "excludes_zero": true
+  },
+  "_meta": {
+    "plinder_dir": "/home/ma490392/.local/share/plinder/2026-09",
+    "omitted_ligand_is_oligo": "declared with the other flags, but this release carries no such column: it provides ligand_is_oligosaccharide, ligand_is_oligonucleotide and ligand_is_oligopeptide as three separate flags. Not substituted post hoc. An earlier run against the 2024-06 release, whose schema does carry the column, reported a difference on it and is superseded.",
+    "n_boot": 2000,
+    "seed": 0,
+    "resampled": "family_cluster",
+    "primary_contrast": "FN - NF",
+    "n_comparisons": 7,
+    "n_comparisons_primary": 7,
+    "originally_planned_but_unavailable": [
+      "ligand_is_oligo"
+    ],
+    "multiplicity_correction": null,
+    "n_systems_dropped": 0
+  }
+}

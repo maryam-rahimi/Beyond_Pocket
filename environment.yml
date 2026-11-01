@@ -1,0 +1,26 @@
+name: beyond-pocket
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy=1.26.4
+  - pandas
+  - pyarrow
+  - scikit-learn
+  - matplotlib
+  - pip
+  - pip:
+      # Extraction only. Everything downstream of
+      # extract_representations.py runs without these.
+      #
+      # 2.2.1 is the package version used here. Note the package
+      # version and the checkpoint are independent: this study
+      # extracts from the Boltz-1 checkpoint, loaded through the
+      # 2.x package. A different package version may load or hook
+      # the same checkpoint differently.
+      - boltz==2.2.1
+      # 0.2.27 is the version this study used. Note that it serves
+      # only PLINDER release 2024-06 through its query interface and
+      # substitutes it silently; the scripts here read the 2026-09
+      # release directory as files instead. See the README.
+      - plinder-core==0.2.27

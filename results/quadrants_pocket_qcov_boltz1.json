@@ -1,0 +1,116 @@
+{
+  "trunk": "boltz1",
+  "cutoff": "2021-09-30",
+  "n_targets": 25289,
+  "S_p": "min over ligands of max pocket_qcov vs pre-cutoff, self excluded",
+  "sweep": {
+    "50": {
+      "FF": {
+        "systems": 20225,
+        "clusters": 2095
+      },
+      "FN": {
+        "systems": 519,
+        "clusters": 171
+      },
+      "NF": {
+        "systems": 3858,
+        "clusters": 948
+      },
+      "NN": {
+        "systems": 687,
+        "clusters": 180
+      }
+    },
+    "70": {
+      "FF": {
+        "systems": 19648,
+        "clusters": 2015
+      },
+      "FN": {
+        "systems": 1096,
+        "clusters": 346
+      },
+      "NF": {
+        "systems": 3113,
+        "clusters": 807
+      },
+      "NN": {
+        "systems": 1432,
+        "clusters": 367
+      }
+    },
+    "80": {
+      "FF": {
+        "systems": 19013,
+        "clusters": 1959
+      },
+      "FN": {
+        "systems": 1731,
+        "clusters": 515
+      },
+      "NF": {
+        "systems": 2607,
+        "clusters": 691
+      },
+      "NN": {
+        "systems": 1938,
+        "clusters": 503
+      }
+    },
+    "90": {
+      "FF": {
+        "systems": 17003,
+        "clusters": 1778
+      },
+      "FN": {
+        "systems": 3741,
+        "clusters": 924
+      },
+      "NF": {
+        "systems": 1729,
+        "clusters": 495
+      },
+      "NN": {
+        "systems": 2816,
+        "clusters": 716
+      }
+    },
+    "95": {
+      "FF": {
+        "systems": 14659,
+        "clusters": 1597
+      },
+      "FN": {
+        "systems": 6085,
+        "clusters": 1276
+      },
+      "NF": {
+        "systems": 1140,
+        "clusters": 361
+      },
+      "NN": {
+        "systems": 3405,
+        "clusters": 831
+      }
+    },
+    "100": {
+      "FF": {
+        "systems": 10950,
+        "clusters": 1338
+      },
+      "FN": {
+        "systems": 9794,
+        "clusters": 1629
+      },
+      "NF": {
+        "systems": 594,
+        "clusters": 222
+      },
+      "NN": {
+        "systems": 3951,
+        "clusters": 942
+      }
+    }
+  }
+}

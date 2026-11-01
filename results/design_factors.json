@@ -1,0 +1,119 @@
+{
+  "both": {
+    "layer": 27,
+    "n_systems": 534,
+    "r2_design_only": 0.3693,
+    "r2_regime_only": 0.123,
+    "r2_both": 0.4589,
+    "regime_adds_over_design": 0.0896,
+    "design_adds_over_regime": 0.3359,
+    "by_quadrant": {
+      "FF": {
+        "n": 152,
+        "auprc_median": 0.7053,
+        "length": 332.5,
+        "n_pocket": 25.0,
+        "positive_rate": 0.0787
+      },
+      "FN": {
+        "n": 122,
+        "auprc_median": 0.3529,
+        "length": 381.5,
+        "n_pocket": 24.0,
+        "positive_rate": 0.0677
+      },
+      "NF": {
+        "n": 136,
+        "auprc_median": 0.7239,
+        "length": 367.0,
+        "n_pocket": 25.5,
+        "positive_rate": 0.0714
+      },
+      "NN": {
+        "n": 124,
+        "auprc_median": 0.6374,
+        "length": 371.5,
+        "n_pocket": 24.5,
+        "positive_rate": 0.0654
+      }
+    }
+  },
+  "s": {
+    "layer": 18,
+    "n_systems": 534,
+    "r2_design_only": 0.3207,
+    "r2_regime_only": 0.1061,
+    "r2_both": 0.4004,
+    "regime_adds_over_design": 0.0797,
+    "design_adds_over_regime": 0.2943,
+    "by_quadrant": {
+      "FF": {
+        "n": 152,
+        "auprc_median": 0.5296,
+        "length": 332.5,
+        "n_pocket": 25.0,
+        "positive_rate": 0.0787
+      },
+      "FN": {
+        "n": 122,
+        "auprc_median": 0.2299,
+        "length": 381.5,
+        "n_pocket": 24.0,
+        "positive_rate": 0.0677
+      },
+      "NF": {
+        "n": 136,
+        "auprc_median": 0.6007,
+        "length": 367.0,
+        "n_pocket": 25.5,
+        "positive_rate": 0.0714
+      },
+      "NN": {
+        "n": 124,
+        "auprc_median": 0.4763,
+        "length": 371.5,
+        "n_pocket": 24.5,
+        "positive_rate": 0.0654
+      }
+    }
+  },
+  "zpool": {
+    "layer": 25,
+    "n_systems": 534,
+    "r2_design_only": 0.3648,
+    "r2_regime_only": 0.1206,
+    "r2_both": 0.4518,
+    "regime_adds_over_design": 0.087,
+    "design_adds_over_regime": 0.3312,
+    "by_quadrant": {
+      "FF": {
+        "n": 152,
+        "auprc_median": 0.6949,
+        "length": 332.5,
+        "n_pocket": 25.0,
+        "positive_rate": 0.0787
+      },
+      "FN": {
+        "n": 122,
+        "auprc_median": 0.3034,
+        "length": 381.5,
+        "n_pocket": 24.0,
+        "positive_rate": 0.0677
+      },
+      "NF": {
+        "n": 136,
+        "auprc_median": 0.704,
+        "length": 367.0,
+        "n_pocket": 25.5,
+        "positive_rate": 0.0714
+      },
+      "NN": {
+        "n": 124,
+        "auprc_median": 0.6294,
+        "length": 371.5,
+        "n_pocket": 24.5,
+        "positive_rate": 0.0654
+      }
+    }
+  }
+}

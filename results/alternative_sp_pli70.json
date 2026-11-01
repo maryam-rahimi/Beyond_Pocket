@@ -1,0 +1,96 @@
+{
+  "metric": "sp_pli",
+  "threshold": 70.0,
+  "agg": "min",
+  "n_test": 534,
+  "n_reassigned": 159,
+  "by_feature": {
+    "both": {
+      "layer": 27,
+      "cells": {
+        "FF": {
+          "n_original": 152,
+          "median_original": 0.7053,
+          "n_new": 114,
+          "median_new": 0.5541
+        },
+        "FN": {
+          "n_original": 122,
+          "median_original": 0.3529,
+          "n_new": 160,
+          "median_new": 0.4216
+        },
+        "NF": {
+          "n_original": 136,
+          "median_original": 0.7239,
+          "n_new": 75,
+          "median_new": 0.7338
+        },
+        "NN": {
+          "n_original": 124,
+          "median_original": 0.6374,
+          "n_new": 185,
+          "median_new": 0.6646
+        }
+      }
+    },
+    "s": {
+      "layer": 18,
+      "cells": {
+        "FF": {
+          "n_original": 152,
+          "median_original": 0.5296,
+          "n_new": 114,
+          "median_new": 0.4348
+        },
+        "FN": {
+          "n_original": 122,
+          "median_original": 0.2299,
+          "n_new": 160,
+          "median_new": 0.3483
+        },
+        "NF": {
+          "n_original": 136,
+          "median_original": 0.6007,
+          "n_new": 75,
+          "median_new": 0.6088
+        },
+        "NN": {
+          "n_original": 124,
+          "median_original": 0.4763,
+          "n_new": 185,
+          "median_new": 0.5196
+        }
+      }
+    },
+    "zpool": {
+      "layer": 25,
+      "cells": {
+        "FF": {
+          "n_original": 152,
+          "median_original": 0.6949,
+          "n_new": 114,
+          "median_new": 0.5955
+        },
+        "FN": {
+          "n_original": 122,
+          "median_original": 0.3034,
+          "n_new": 160,
+          "median_new": 0.4289
+        },
+        "NF": {
+          "n_original": 136,
+          "median_original": 0.704,
+          "n_new": 75,
+          "median_new": 0.7098
+        },
+        "NN": {
+          "n_original": 124,
+          "median_original": 0.6294,
+          "n_new": 185,
+          "median_new": 0.6599
+        }
+      }
+    }
+  }
+}
